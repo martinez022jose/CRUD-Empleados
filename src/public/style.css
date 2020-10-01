@@ -1,0 +1,27 @@
+.cambio{
+    display: flex;
+}
+
+.ocultar{
+    display: none;
+}
+
+.absolute{
+    position: fixed;
+    top:0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    justify-content: center;
+    align-items:center;
+    background: rgba(0,0,0,0.6);
+    width: 100%;
+    
+}
+
+.relative{
+    position: relative;
+    
+    
+    
+}

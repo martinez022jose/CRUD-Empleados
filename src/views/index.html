@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Principal</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='funcionalidad.js'></script>
+    
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Fin Bootstrap Css -->
+</head>
+<body>
+
+    <section id="total" class="container">
+        <div class="row p-5">
+            <div class="col-12">
+                <table class="bg-ligth text-center">
+                    <tr class="bg-dark text-white">
+                      <th class="px-5">Id</th>
+                      <th class="px-5">Nombre y Apellido</th>
+                      <th class="px-5">Posicion</th>
+                      <th class="px-5">Sueldo</th>
+                      <th class="px-5"></th>
+                      <th class="px-5"></th>
+                      <th class="px-5"></th>
+                    </tr>
+
+                    <% for(var i = 0; i < empleados.length; i++){ %>
+                    <tr class="p-5">
+                      <td><%= empleados[i].id %></td>
+                      <td><%= empleados[i].nombre %></td>
+                      <td><%= empleados[i].puesto %></td>
+                      <td><%= empleados[i].sueldo %></td>
+                      <td>
+                          <a href="/done/<%= empleados[i]._id %>" class="btn btn-block <%= empleados[i].status ? 'btn-success' : 'btn-warning' %>">Done</a>
+                      </td>
+                      <td>
+                          <button id="up" class="btn btn-success btn-block">Delete</button>
+                          <div id="upp" class="absolute" style="display: none;">
+                            <div class="col-12">
+                                <h5>Estas seguro de eliminar</h5>
+                                <a href="/delete/<%= empleados[i]._id %>"><button class="btn btn-success" id="resSi">Si</button></a>
+                                <a><button class="btn btn-success" id="resNo">No</button></a>
+                            </div>
+                        </div>
+                      </td>
+                      <!--<td><a href="/update/<%= empleados[i]._id %>" class="btn btn-info btn-block">Update</a></td>-->
+                      <td><input value="Update" type="button" class="btn btn-info btn-block"></td>
+                    </tr>
+                    <% } %>
+                </table>
+            </div>
+            <div style="display: none;">
+                <h3>Formulario</h3>
+                <form action="/add" method="POST">
+                    <div class="form-group">
+                        <label>Id: </label>
+                        <input type="text" class="form-control" name="id" placeholder="Ingrese Codigo">
+                    </div>
+                    <div class="form-group">
+                      <label>Nombre y Apellido: </label>
+                      <input type="text" class="form-control" name="nombre" placeholder="Ingrese Nombre y Apellido Completo">
+                    </div>
+                    <div class="form-group">
+                        <label>Posicion </label>
+                        <input type="text" class="form-control" name="puesto" placeholder="Ingrese Puesto">
+                    </div>
+                    <div class="form-group">
+                        <label>Sueldo: </label>
+                        <input type="text" class="form-control" name="sueldo" placeholder="Ingrese Sueldo">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block p-3">Enviar</button>
+                </form>
+                
+            </div>
+    
+
+        </div>
+
+    </section>
+
+    
+    <script src='funcionalidad.js'></script>
+<!--Script Bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!--Fin Script Bootstrap-->
+    
+</body>
+</html>

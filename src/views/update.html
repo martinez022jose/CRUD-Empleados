@@ -1,0 +1,20 @@
+<h3>Formulario</h3>
+<form action="/update/<%= empleado._id %>" method="POST">
+    <div class="form-group">
+        <label>Codigo: </label>
+        <input type="text" class="form-control" name="id" placeholder="Ingrese Codigo" value="<%= empleado.id %>">
+    </div>
+    <div class="form-group">
+      <label>Nombre/s: </label>
+      <input type="text" class="form-control" name="nombre" placeholder="Ingrese Nombre Completo" value="<%= empleado.nombre %>">
+    </div>
+    <div class="form-group">
+        <label>Puesto </label>
+        <input type="text" class="form-control" name="puesto" placeholder="Ingrese Puesto" value="<%= empleado.puesto %>">
+    </div>
+    <div class="form-group">
+        <label>Sueldo: </label>
+        <input type="text" class="form-control" name="sueldo" placeholder="Ingrese Sueldo" value="<%= empleado.sueldo %>">
+    </div>
+    <button type="submit" class="btn btn-success btn-block p-3">Enviar</button>
+</form>
