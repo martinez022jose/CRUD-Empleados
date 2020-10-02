@@ -1,3 +1,15 @@
+.bgBlack{
+    background: black;
+}
+
+.bgOrange{
+    background: orange;
+}
+
+.sizeEstandar{
+    font-size: 18px;
+}
+
 .cambio{
     display: flex;
 }

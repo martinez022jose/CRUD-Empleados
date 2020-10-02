@@ -13,23 +13,24 @@
     <!-- Fin Bootstrap Css -->
 </head>
 <body>
-
+    <%- include('header.html')%>
     <section id="total" class="container">
         <div class="row p-5">
             <div class="col-12">
-                <table class="bg-ligth text-center">
-                    <tr class="bg-dark text-white">
-                      <th class="px-5">Id</th>
-                      <th class="px-5">Nombre y Apellido</th>
-                      <th class="px-5">Posicion</th>
-                      <th class="px-5">Sueldo</th>
-                      <th class="px-5"></th>
-                      <th class="px-5"></th>
-                      <th class="px-5"></th>
+                <table class="bg-light text-center">
+                    <tr class="bgOrange text-black sizeEstandar">
+                      <th class="px-5 py-3">Id</th>
+                      <th class="px-5 py-3">Nombre y Apellido</th>
+                      <th class="px-5 py-3">Posicion</th>
+                      <th class="px-5 py-3">Sueldo</th>
+                      <th class="px-5 py-3"></th>
+                      <th class="px-5 py-3"></th>
+                      <th class="px-5 py-3"></th>
+                      <th class="px-5 py-3"></th>
                     </tr>
 
                     <% for(var i = 0; i < empleados.length; i++){ %>
-                    <tr class="p-5">
+                    <tr>
                       <td><%= empleados[i].id %></td>
                       <td><%= empleados[i].nombre %></td>
                       <td><%= empleados[i].puesto %></td>
@@ -48,11 +49,13 @@
                         </div>
                       </td>
                       <!--<td><a href="/update/<%= empleados[i]._id %>" class="btn btn-info btn-block">Update</a></td>-->
-                      <td><input value="Update" type="button" class="btn btn-info btn-block"></td>
+                      <td><button  class="btn btn-info btn-block">Update</button></td>
+                      <td><button  class="btn btn-info btn-block">Add</button></td>
                     </tr>
                     <% } %>
                 </table>
             </div>
+
             <div style="display: none;">
                 <h3>Formulario</h3>
                 <form action="/add" method="POST">
