@@ -15,7 +15,7 @@
 <body>
     <%- include('header.html')%>
 
-    <section id="total" class="container">
+    <section id="grilla" class="container">
         <div class="row p-5">
             <div class="col-12">
                     <table class="bg-light text-center">
@@ -40,12 +40,15 @@
                               <a href="/done/<%= empleados[i]._id %>" class="btn btn-block <%= empleados[i].status ? 'btn-success' : 'btn-warning' %>">Done</a>
                           </td>
                           <td>
-                              <button id="up" class="btn btn-success btn-block">Delete</button>
-                              <div id="upp" class="absolute" style="display: none;">
-                                <div class="col-12">
-                                    <h5>Estas seguro de eliminar</h5>
-                                    <a href="/delete/<%= empleados[i]._id %>"><button class="btn btn-success" id="resSi">Si</button></a>
-                                    <a><button class="btn btn-success" id="resNo">No</button></a>
+                              <button id="delete" class="btn btn-danger btn-block">Delete</button>
+
+                              <div id="ventanaDelete" class="ocultar">
+                                <div class="row caractFixed">
+                                    <div class="col-4 bg-dark rounded p-5 text-white">
+                                        <h2 class="mb-5">Estas seguro de eleminar este registro?</h2>
+                                         <a href="/delete/<%= empleados[i]._id %>" class="mb-3 btn btn-block btn-success">Si</a>
+                                        <button id="resNoDelete" class="btn btn-block bg-danger">No</button>
+                                    </div>
                                 </div>
                             </div>
                           </td>

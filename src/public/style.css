@@ -18,6 +18,10 @@
     display: flex;
 }
 
+.bgRed{
+    background: red;
+}
+
 .cambio{
     display: flex;
 }
@@ -35,8 +39,10 @@
     justify-content: center;
     align-items:center;
     background: rgba(0,0,0,0.6);
-    
-    
+}
+
+.bgGris{
+    background: #ededed;
 }
 
 .relative{
