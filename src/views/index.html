@@ -14,76 +14,59 @@
 </head>
 <body>
     <%- include('header.html')%>
+
     <section id="total" class="container">
         <div class="row p-5">
             <div class="col-12">
-                <table class="bg-light text-center">
-                    <tr class="bgOrange text-black sizeEstandar">
-                      <th class="px-5 py-3">Id</th>
-                      <th class="px-5 py-3">Nombre y Apellido</th>
-                      <th class="px-5 py-3">Posicion</th>
-                      <th class="px-5 py-3">Sueldo</th>
-                      <th class="px-5 py-3"></th>
-                      <th class="px-5 py-3"></th>
-                      <th class="px-5 py-3"></th>
-                      <th class="px-5 py-3"></th>
-                    </tr>
-
-                    <% for(var i = 0; i < empleados.length; i++){ %>
-                    <tr>
-                      <td><%= empleados[i].id %></td>
-                      <td><%= empleados[i].nombre %></td>
-                      <td><%= empleados[i].puesto %></td>
-                      <td><%= empleados[i].sueldo %></td>
-                      <td>
-                          <a href="/done/<%= empleados[i]._id %>" class="btn btn-block <%= empleados[i].status ? 'btn-success' : 'btn-warning' %>">Done</a>
-                      </td>
-                      <td>
-                          <button id="up" class="btn btn-success btn-block">Delete</button>
-                          <div id="upp" class="absolute" style="display: none;">
-                            <div class="col-12">
-                                <h5>Estas seguro de eliminar</h5>
-                                <a href="/delete/<%= empleados[i]._id %>"><button class="btn btn-success" id="resSi">Si</button></a>
-                                <a><button class="btn btn-success" id="resNo">No</button></a>
+                    <table class="bg-light text-center">
+                        <tr class="bgOrange text-black sizeEstandar">
+                          <th class="px-5 py-3">Id</th>
+                          <th class="px-5 py-3">Nombre y Apellido</th>
+                          <th class="px-5 py-3">Posicion</th>
+                          <th class="px-5 py-3">Sueldo</th>
+                          <th class="px-5 py-3"></th>
+                          <th class="px-5 py-3"></th>
+                          <th class="px-5 py-3"></th>
+                          <th class="px-5 py-3 bg-success"><button id="add" class="btn text-white btn-block">Add</button></th>
+                        </tr>
+    
+                        <% for(var i = 0; i < empleados.length; i++){ %>
+                        <tr>
+                          <td><%= empleados[i].id %></td>
+                          <td><%= empleados[i].nombre %></td>
+                          <td><%= empleados[i].puesto %></td>
+                          <td><%= empleados[i].sueldo %></td>
+                          <td>
+                              <a href="/done/<%= empleados[i]._id %>" class="btn btn-block <%= empleados[i].status ? 'btn-success' : 'btn-warning' %>">Done</a>
+                          </td>
+                          <td>
+                              <button id="up" class="btn btn-success btn-block">Delete</button>
+                              <div id="upp" class="absolute" style="display: none;">
+                                <div class="col-12">
+                                    <h5>Estas seguro de eliminar</h5>
+                                    <a href="/delete/<%= empleados[i]._id %>"><button class="btn btn-success" id="resSi">Si</button></a>
+                                    <a><button class="btn btn-success" id="resNo">No</button></a>
+                                </div>
                             </div>
-                        </div>
-                      </td>
-                      <!--<td><a href="/update/<%= empleados[i]._id %>" class="btn btn-info btn-block">Update</a></td>-->
-                      <td><button  class="btn btn-info btn-block">Update</button></td>
-                      <td><button  class="btn btn-info btn-block">Add</button></td>
-                    </tr>
-                    <% } %>
-                </table>
+                          </td>
+                          <!--<td><a href="/update/<%= empleados[i]._id %>" class="btn btn-info btn-block">Update</a></td>-->
+                          <td><button  class="btn btn-info btn-block">Update</button></td>
+                          
+                        </tr>
+                        <% } %>
+                    </table>
+            
             </div>
 
-            <div style="display: none;">
-                <h3>Formulario</h3>
-                <form action="/add" method="POST">
-                    <div class="form-group">
-                        <label>Id: </label>
-                        <input type="text" class="form-control" name="id" placeholder="Ingrese Codigo">
-                    </div>
-                    <div class="form-group">
-                      <label>Nombre y Apellido: </label>
-                      <input type="text" class="form-control" name="nombre" placeholder="Ingrese Nombre y Apellido Completo">
-                    </div>
-                    <div class="form-group">
-                        <label>Posicion </label>
-                        <input type="text" class="form-control" name="puesto" placeholder="Ingrese Puesto">
-                    </div>
-                    <div class="form-group">
-                        <label>Sueldo: </label>
-                        <input type="text" class="form-control" name="sueldo" placeholder="Ingrese Sueldo">
-                    </div>
-                    <button type="submit" class="btn btn-success btn-block p-3">Enviar</button>
-                </form>
-                
-            </div>
+           
     
 
         </div>
 
     </section>
+
+    
+    <%- include('formulario.html')%>
 
     
     <script src='funcionalidad.js'></script>
