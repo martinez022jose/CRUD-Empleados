@@ -1,20 +1,45 @@
-<h3>Formulario</h3>
-<form action="/update/<%= empleado._id %>" method="POST">
-    <div class="form-group">
-        <label>Codigo: </label>
-        <input type="text" class="form-control" name="id" placeholder="Ingrese Codigo" value="<%= empleado.id %>">
-    </div>
-    <div class="form-group">
-      <label>Nombre/s: </label>
-      <input type="text" class="form-control" name="nombre" placeholder="Ingrese Nombre Completo" value="<%= empleado.nombre %>">
-    </div>
-    <div class="form-group">
-        <label>Puesto </label>
-        <input type="text" class="form-control" name="puesto" placeholder="Ingrese Puesto" value="<%= empleado.puesto %>">
-    </div>
-    <div class="form-group">
-        <label>Sueldo: </label>
-        <input type="text" class="form-control" name="sueldo" placeholder="Ingrese Sueldo" value="<%= empleado.sueldo %>">
-    </div>
-    <button type="submit" class="btn btn-success btn-block p-3">Enviar</button>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('head.html')%>
+</head>
+<body>
+    <section class="container-fluid caractFixed">
+        <div class="row bgRgba p-5 rounded text-white mt-5 relative" style="width: 40%; margin: auto;">
+            <div class="col-12 p-5 text-center">
+                <form action="/update/<%= idMongo %>" method="POST">
+                    <h3 class="mb-5">Formulario Update</h3>
+                    <div class="form-group">
+                        <label>Codigo: </label>
+                        <input type="text" class="form-control" name="id" placeholder="Ingrese Codigo" value="<%= empleado.id %>">
+                    </div>
+                    <div class="form-group">
+                      <label>Nombre/s: </label>
+                      <input type="text" class="form-control" name="nombre" placeholder="Ingrese Nombre Completo" value="<%= empleado.nombre %>">
+                    </div>
+                    <div class="form-group">
+                        <label>Puesto </label>
+                        <input type="text" class="form-control" name="puesto" placeholder="Ingrese Puesto" value="<%= empleado.puesto %>">
+                    </div>
+                    <div class="form-group">
+                        <label>Sueldo: </label>
+                        <input type="text" class="form-control" name="sueldo" placeholder="Ingrese Sueldo" value="<%= empleado.sueldo %>">
+                    </div>
+                    <button type="submit" class="btn btn-success btn-block p-3">Modificar</button>
+                </form>
+             </div>
+             <a href="/cierre" class="far fa-times-circle fontEstandar absolute sinHover sinStyle"></a>
+        </div>
+    </section>
+
+    
+
+<!--Script Bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!--Fin Script Bootstrap-->
+    
+</body>
+</html>
+

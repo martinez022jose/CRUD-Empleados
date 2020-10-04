@@ -2,7 +2,7 @@ const express = require('express');
 const route = express.Router();
 const Empleado = require('../models/empleado.js');
 const bodyParser = require('body-parser');
-//const { Router } = require('express');
+const { Router } = require('express');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 route.get('/', urlencodedParser, async (req, res) => {
@@ -11,10 +11,11 @@ route.get('/', urlencodedParser, async (req, res) => {
      {empleados: empleados,});
 });
 
-route.get('/update/:id', async (req, res) =>{
+route.get('/renderUpdate/:id', async (req, res) =>{
     const id = req.params.id;
     const empleado = await Empleado.findById(id);
-    res.render('update.html',{empleado: empleado});
+    res.render('update.html',{empleado: empleado,
+                              idMongo: id});
 
 });
 
@@ -48,6 +49,10 @@ route.get('/renderDelete/:id', async (req, res) => {
 route.get('/delete/:id', async (req, res) => {
     const id = req.params.id;
     await Empleado.findByIdAndDelete(id);
+    res.redirect('/');
+});
+
+route.get('/cierre', (req, res) => {
     res.redirect('/');
 });
 

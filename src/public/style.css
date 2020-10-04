@@ -2,6 +2,10 @@
     background: black;
 }
 
+.bgRgba{
+    background: rgba(0,0,0,0.7);
+}
+
 .bgOrange{
     background: orange;
 }
@@ -26,8 +30,39 @@
     display: flex;
 }
 
+.fontEstandar{
+    font-size: 20px;
+}
+
+.sinStyle{
+    text-decoration: none;
+    color: white;
+}
+
+.sinHover:hover{
+    text-decoration: none;
+    background: none;
+    color: white;
+}
+
+.absolute{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.relative{
+    position: relative;
+}
+
 .ocultar{
     display: none;
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .caractFixed{
@@ -48,7 +83,5 @@
 
 .relative{
     position: relative;
-    
-    
-    
+        
 }
