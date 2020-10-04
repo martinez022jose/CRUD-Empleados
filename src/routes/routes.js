@@ -2,6 +2,7 @@ const express = require('express');
 const route = express.Router();
 const Empleado = require('../models/empleado.js');
 const bodyParser = require('body-parser');
+//const { Router } = require('express');
 const urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 route.get('/', urlencodedParser, async (req, res) => {
@@ -37,10 +38,19 @@ route.get('/done/:id', async (req, res) =>{
     res.redirect('/');
 })
 
+route.get('/renderDelete/:id', async (req, res) => {
+    const idEmpleado = req.params.id;
+    const empleado = await Empleado.findById(idEmpleado);
+    res.render('resDelete.html', {
+        empleado: empleado,});
+});
+
 route.get('/delete/:id', async (req, res) => {
     const id = req.params.id;
-    await Empleado.findByIdAndRemove(id);
+    await Empleado.findByIdAndDelete(id);
     res.redirect('/');
 });
+
+
 
 module.exports = route;

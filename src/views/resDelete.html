@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <%- include('head.html')%>
+</head>
+<body>
+    <% empleado; %>
+    <section class="container-fluid caractFixed mt-3">
+        <div class="row" style="width: 30%; margin: auto;">
+            <div class="col-12 bg-dark rounded p-5 text-white text-center">
+                <h2 class="mb-5">Estas seguro de eliminar este registro?</h2>
+                <div class="row">
+                    <label>Id: </label><p class="ml-2"> <%= empleado.id%> </p>
+                </div>
+                <div class="row">
+                    <label>Nombre y Apellido: </label><p class="ml-2"><%= empleado.nombre%></p>
+                </div>
+                <div class="row">
+                    <label>Posicion: </label><p class="ml-2"><%= empleado.puesto%></p>
+                </div>
+                <div class="row">
+                    <label>Sueldo: </label><p class="ml-2"><%= empleado.sueldo%></p>
+                </div>
+                <a href="/delete/<%= empleado._id%>" class="mb-3 btn btn-block btn-success">Si</a>
+                <a href="/" class="mb-3 btn btn-block btn-danger">No</a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    
+<!--Script Bootstrap-->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<!--Fin Script Bootstrap-->
+    
+</body>
+</html>
+
