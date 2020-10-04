@@ -81,6 +81,10 @@
     background: #ededed;
 }
 
+.borderDouble{
+    border: 5px double gray;
+}
+
 .relative{
     position: relative;
         

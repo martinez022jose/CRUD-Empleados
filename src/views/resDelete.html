@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title><%= title%></title>
     <%- include('head.html')%>
 </head>
 <body>
@@ -9,18 +10,22 @@
         <div class="row mt-5" style="width: 30%;margin:auto">
             <div class="col-12 bgRgba rounded p-5 text-white text-center">
                 <h2 class="mb-5">¿Estas seguro de eliminar registro seleccionado?</h2>
-                <div class="row">
-                    <label>Id: </label><p class="ml-2"> <%= empleado.id%> </p>
-                </div>
-                
-                <div class="row">
-                    <label>Nombre y Apellido: </label><p class="ml-2"><%= empleado.nombre%></p>
-                </div>
-                <div class="row">
-                    <label>Posicion: </label><p class="ml-2"><%= empleado.puesto%></p>
-                </div>
-                <div class="row">
-                    <label>Sueldo: </label><p class="ml-2"><%= empleado.sueldo%></p>
+                <div class="borderDouble p-5 rounded">
+                    <div class="row">
+                        <label>Id: </label><p class="ml-2"> <%= empleado.id%> </p>
+                    </div>
+                    
+                    <div class="row">
+                        <label>Nombre y Apellido: </label><p class="ml-2"><%= empleado.nombre%></p>
+                    </div>
+
+                    <div class="row">
+                        <label>Posicion: </label><p class="ml-2"><%= empleado.puesto%></p>
+                    </div>
+
+                    <div class="row">
+                        <label>Sueldo: </label><p class="ml-2"><%= empleado.sueldo%></p>
+                    </div>
                 </div>
                 <a href="/delete/<%= empleado._id%>" class="mb-3 mt-5 btn btn-block btn-success">Si</a>
                 <a href="/" class="mb-3 btn btn-block btn-danger">No</a>

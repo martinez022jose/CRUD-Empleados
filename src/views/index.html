@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <title><%= title%></title>
     <%- include('head.html')%>
 </head>
 <body>
@@ -28,7 +29,7 @@
                           <td><%= empleados[i].puesto %></td>
                           <td><%= empleados[i].sueldo %></td>
                           <td>
-                            <a href="/done/<%= empleados[i]._id %>" class="btn btn-block <%= empleados[i].status ? 'btn-success' : 'btn-dark' %>">active</a>
+                            <a href="/active/<%= empleados[i]._id %>" class="btn btn-block <%= empleados[i].status ? 'btn-dark' : 'btn-success' %>">active</a>
                           </td>
                           <td>
                               <a id="delete" href="/renderDelete/<%= empleados[i]._id%>" class="btn btn-danger btn-block">Delete</a>   
