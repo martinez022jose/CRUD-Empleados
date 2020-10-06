@@ -20,16 +20,16 @@ Se puede instalar de forma individual cada dependencia con el gestor de paquetes
 o simplemente usando **npm install** para descargar las dependencias especificadas del **package.json**.
 
 ## Ejecutando las pruebas :memo:
-> Home 
-<img height="800px" width="1000px" scale="100%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/home.png"/>
+> HOME 
+<img height="600px" width="1000px" scale="100%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/home.png"/>
 
->AboutUs
+> ADD
 <img height="800px" width="1000px" scale="50%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/formulario.png"/>
 
->Opp
+> UPDATE
 <img height="800px" width="1000px" scale="50%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/update.png"/>
 
->Contact
+> DELETE
 <img height="800px" width="1000px" scale="50%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/delete.png"/>
                                                                                                                                               
 
