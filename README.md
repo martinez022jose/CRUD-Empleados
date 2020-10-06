@@ -16,7 +16,7 @@ Para poder correr el programa se requiere previamente:
 * Ejs
 * MongoDB
 
-Se puede instalar de forma individual cada dependencia con el gestor de paquetes de Node js **npm** . Ej **npm install nombreDeDependencia**
+Se puede instalar de forma individual cada dependencia con el gestor de paquetes de Node js: **npm** . Ej **npm install nombreDeDependencia**
 o simplemente usando **npm install** para descargar las dependencias especificadas del **package.json**.
 
 ## Ejecutando las pruebas :memo:
