@@ -21,7 +21,7 @@ o simplemente usando **npm install** para descargar las dependencias especificad
 
 ## Ejecutando las pruebas :memo:
 > Home 
-<img height="400px" width="1400px" scale="50%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/home.png"/>
+<img height="400px" width="1800px" scale="50%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/home.png"/>
 
 > Add
 <img height="800px" width="800px" scale="50%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/formulario.png"/>
