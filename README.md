@@ -1,7 +1,7 @@
 # CRUD-Empleados
 
 ## Objetivo :dart:
-Se busca realizar un CRUD estandar, que permita:
+Se busca realizar un CRUD, que permita realizar:
 
 * agregar un registro.
 * actualizar un registro.
@@ -20,17 +20,17 @@ Se puede instalar de forma individual cada dependencia con el gestor de paquetes
 o simplemente usando **npm install** para descargar las dependencias especificadas del **package.json**.
 
 ## Ejecutando las pruebas :memo:
-> HOME 
-<img height="600px" width="1000px" scale="100%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/home.png"/>
+> Home 
+<img height="400px" width="1400px" scale="50%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/home.png"/>
 
-> ADD
-<img height="800px" width="1000px" scale="50%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/formulario.png"/>
+> Add
+<img height="800px" width="800px" scale="50%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/formulario.png"/>
 
-> UPDATE
-<img height="800px" width="1000px" scale="50%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/update.png"/>
+> Update
+<img height="800px" width="800px" scale="50%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/update.png"/>
 
-> DELETE
-<img height="800px" width="1000px" scale="50%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/delete.png"/>
+> Delete
+<img height="800px" width="800px" scale="50%" src="https://github.com/martinez022jose/CRUD-Empleados/blob/master/screenShotsReadMe/delete.png"/>
                                                                                                                                               
 
 ## Autor/Autores :pushpin:
